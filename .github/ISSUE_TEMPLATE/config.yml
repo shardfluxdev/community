@@ -4,7 +4,7 @@ contact_links:
     url: https://docs.shardflux.dev
     about: Installation, getting started, and client/API reference.
   - name: Usage, account, billing, or private support
-    url: mailto:shardflux@heliosone.fi
+    url: https://github.com/shardfluxdev/community/blob/main/SUPPORT.md
     about: Contact the Shardflux team without posting account details publicly.
   - name: Report a security vulnerability privately
     url: https://github.com/shardfluxdev/community/security/advisories/new
