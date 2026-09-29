@@ -1,0 +1,44 @@
+name: Request a feature
+description: Describe a capability you need or an improvement to Shardflux.
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what you are trying to accomplish. This request will be public; leave out secrets and confidential data.
+        If existing behavior is broken, use the bug report form instead.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - JavaScript / TypeScript SDK (@shardflux/sdk)
+        - Python SDK (shardflux on PyPI)
+        - CLI (@shardflux/cli or shardflux on npm)
+        - MCP server (@shardflux/mcp)
+        - API / cloud workspaces
+        - Dashboard / website
+        - Documentation / examples
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the workflow and what is missing or difficult today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help?
+      description: Describe the behavior or capability you would like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround or alternatives
+      description: Optional. What have you tried, and what are its limitations?

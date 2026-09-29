@@ -1,0 +1,69 @@
+name: Report a bug
+description: Report unexpected behavior in a client, the API, cloud workspaces, or documentation.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This report will be public. Remove secrets, customer data, and confidential code.
+        For account or billing help, email [shardflux@heliosone.fi](mailto:shardflux@heliosone.fi).
+        Report vulnerabilities [privately](https://github.com/shardfluxdev/community/security/advisories/new).
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - JavaScript / TypeScript SDK (@shardflux/sdk)
+        - Python SDK (shardflux on PyPI)
+        - CLI (@shardflux/cli or shardflux on npm)
+        - MCP server (@shardflux/mcp)
+        - API / cloud workspaces
+        - Dashboard / website
+        - Documentation / examples
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Package and runtime versions
+      description: For client reports, include the exact package and Node.js or Python version. For website-only reports, leave this empty.
+      placeholder: "@shardflux/sdk 0.9.0, Node.js 24; or shardflux (PyPI) 0.5.0, Python 3.12"
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, package manager, browser, or MCP host when relevant.
+      placeholder: "macOS; npm; Claude Desktop"
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps or minimal reproduction
+      description: Show the smallest example that triggers the problem. For an installation failure, include the install command.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include a sanitized error or screenshot if useful.
+    validations:
+      required: true
+  - type: input
+    id: request
+    attributes:
+      label: Request ID and error code
+      description: Optional. Include them if the API or client returned them. Never include an API key or session token.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Optional. Does it happen every time? Is there a workaround or an earlier version that worked?
